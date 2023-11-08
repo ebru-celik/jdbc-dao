@@ -39,3 +39,6 @@ build/
 .DS_Store
 /.metadata/
 /bin/
+
+# Compiled Java class files
+*.class
