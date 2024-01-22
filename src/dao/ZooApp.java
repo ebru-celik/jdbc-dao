@@ -19,7 +19,6 @@ public class ZooApp {
 				System.out.println("2. add animal");
 				System.out.println("3. delete animal");
 				System.out.println("4. update animal");
-				System.out.println("5. clone animal");
 				
 				int userWahl = getUserInputAsInt("Your Choice: ");
 				switch(userWahl) {
@@ -35,17 +34,22 @@ public class ZooApp {
 						deleteAnimal(dao);
 						break;
 					case 4:
-						throw new UnsupportedOperationException("noch nicht realisiert");
-					case 5:
-						throw new UnsupportedOperationException("noch nicht realisiert");
+						updateAnimal(dao);
+						break;
 					default:
 						System.out.println("invalid Choice: " + userWahl);
-						System.out.println("Please enter a number between 1 and 5 : ");
+						System.out.println("Please enter a number between 1 and 4 : ");
 						break;
 				}
 			}
 
 	} // end main
+	
+	static void updateAnimal(AnimalDAO dao) {
+		int id = getUserInputAsInt("Enter ID of animal to update: ");
+		String name = getUserInput("Enter new animal name: ");
+		dao.updateOnID(id, name);
+	}
 	
 	static void deleteAnimal(AnimalDAO dao) {
 		int id = getUserInputAsInt("Enter ID of animal to delete: ");
@@ -53,8 +57,7 @@ public class ZooApp {
 	}
 	
 	static void insertAnimal(AnimalDAO dao) {
-		String name = getUserInput("What is the name of the animal? ");
-		
+		String name = getUserInput("What is the name of the animal?: ");
 		dao.add(new Animal(name));
 	}
 	
