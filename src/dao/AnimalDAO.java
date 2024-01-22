@@ -19,4 +19,5 @@ public interface AnimalDAO {
 	List<Animal> findAll();
 	void add(Animal t);
 	void deleteOnID(int id);
+	void updateOnID(int id, String newName);
 }

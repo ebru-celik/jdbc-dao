@@ -71,17 +71,30 @@ public class DerbyDatabaseAnimalDAO implements AnimalDAO {
 	@Override
 	public void deleteOnID(int id) {
 		try(Connection connection = JDBC_Utils.createConnection();
-			Statement stm = connection.createStatement();
-			ResultSet res = stm.executeQuery("select * from zoo")) {
+			Statement stm = connection.createStatement()) {
 
 			int rows = stm.executeUpdate("delete from zoo where id=" + id);
-			System.out.println("row deleted: " + rows); 
+			System.out.println("Number of deleted rows: " + rows); 
 		
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		
 		
+	}
+
+	@Override
+	public void updateOnID(int id, String newName) {
+		try(Connection connection = JDBC_Utils.createConnection();
+				Statement stm = connection.createStatement()) {
+
+				int rows = stm.executeUpdate("update zoo set name='"+newName+"' where id=" + id);
+				
+				System.out.println("Number of updated rows: " + rows); 
+			
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 	}
 
 }
