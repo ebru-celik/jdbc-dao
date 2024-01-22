@@ -104,7 +104,6 @@ public class JDBC_Utils {
 				System.out.printf(fmt, id, name);
 			}
 			
-			
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}

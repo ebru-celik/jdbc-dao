@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Sun Nov 05 16:36:23 CET 2023:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-018b-a020-c232-000007601d88 
+Sun Nov 05 20:55:47 CET 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-018b-a10e-4023-000007600000 
 on database directory C:\Users\CC-Student\eclipse-workspace-OCP\ZooAppDAO\zooDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@22d8cfe0 
 Loaded from file:/C:/Users/CC-Student/eclipse-workspace-OCP/ZooAppDAO/lib/derby.jar
 java.vendor=Eclipse Adoptium
